@@ -3,9 +3,17 @@ import Vue from 'vue'
 import {
   Button,
   Cell,
-  CellGroup
+  CellGroup,
+  Field,
+  NavBar,
+  Toast,
+  CountDown
 } from 'vant'
 // 注册
 Vue.use(Button)
   .use(Cell)
   .use(CellGroup)
+  .use(Field)
+  .use(NavBar)
+  .use(Toast)
+  .use(CountDown)
