@@ -19,16 +19,18 @@ request.defaults.transformResponse = [function (data) {
   }
 }]
 // 请求拦截器
-axios.interceptors.request.use(function (config) {
+request.interceptors.request.use(function (config) {
   const { user } = store.state
+  // console.log(user)
   if (user) {
-    config.headers.Authorization = `Brarer ${user.token}`
+    config.headers.Authorization = `Bearer ${user.token}`
   }
   return config
 }, function (error) {
   return Promise.reject(error)
 })
-axios.interceptors.response.use(function (response) {
+// 响应拦截器
+request.interceptors.response.use(function (response) {
   return response
 }, function (error) {
   return Promise.reject(error)

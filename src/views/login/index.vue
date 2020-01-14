@@ -34,8 +34,8 @@ export default {
   data () {
     return {
       user: {
-        code: '',
-        mobile: ''
+        code: '246810',
+        mobile: '13911111111'
       },
       isCountDownShow: false
     }
